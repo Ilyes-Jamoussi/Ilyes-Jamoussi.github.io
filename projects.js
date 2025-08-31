@@ -100,8 +100,18 @@ const skillsCategories = {
 const techLogos = {
     "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    "SCSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     "HTML5": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     "CSS3": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    "Angular": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+    "NestJS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+    "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    "Swagger": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
+    "Postman": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+    "Amazon EC2": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-ec2.svg",
+    "Jasmine": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jasmine/jasmine-original.svg",
     "React Native": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "Expo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg",
     "AWS Amplify": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-amplify.svg",
@@ -128,7 +138,8 @@ const techLogos = {
 const projects = [
     {
         title: "Serverless Cross-Platform Mobile App",
-        description: "The application is a cross-platform mobile solution that fully digitizes field technicians' operations by connecting them with dispatchers in real time while ensuring seamless work in low-connectivity environments. It provides a complete workflow where dispatchers can assign and monitor tasks, and technicians can receive work orders, update their status, and report completion directly through the app. A dual inventory system combines a shared central depot with each technician's personal suitcase, enabling accurate tracking of parts taken, transported, and used. To make this process faster and more reliable, the app integrates barcode scanning, allowing quick registration of items with minimal errors. Technicians can also consult available parts in both their suitcase and the depot, making resource planning easier. They are further able to capture and upload photo documentation as proof of work or to report issues, ensuring transparency and accountability in operations. The application is designed with offline-first synchronization, so technicians can continue working seamlessly without network coverage. Once a connection is restored, all data synchronizes automatically, ensuring continuity and reliability. Finally, an AI-powered assistant supports technicians by simplifying documentation and reporting. It automates repetitive entries and generates summaries, reducing administrative effort and allowing field workers to focus on their core tasks.",
+        developmentDate: "May 2025 - Aug. 2025",
+        description: "A cross-platform mobile solution that fully digitizes field technicians' operations by connecting them with dispatchers in real time while ensuring seamless work in low-connectivity environments. It provides a complete workflow where dispatchers can assign and monitor tasks, and technicians can receive work orders, update their status, and report completion directly through the app.\n\nA dual inventory system combines a shared central depot with each technician's personal suitcase, enabling accurate tracking of parts taken, transported, and used. To make this process faster and more reliable, the app integrates barcode scanning, allowing quick registration of items with minimal errors. Technicians can also consult available parts in both their suitcase and the depot, making resource planning easier.\n\nThey are further able to capture and upload photo documentation as proof of work or to report issues, ensuring transparency and accountability in operations. The application is designed with offline-first synchronization, so technicians can continue working seamlessly without network coverage. Once a connection is restored, all data synchronizes automatically, ensuring continuity and reliability.\n\nFinally, an AI-powered assistant supports technicians by simplifying documentation and reporting. It automates repetitive entries and generates summaries, reducing administrative effort and allowing field workers to focus on their core tasks.",
         technologies: ["React Native", "Expo", "TypeScript", "Jest", "ESLint", "Prettier", "GitLab", "AWS Amplify", "AWS AppSync", "DynamoDB", "Amazon Cognito", "Amazon S3", "Amazon Bedrock", "Amazon Location Service", "AWS Lambda"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/mobile-fullstack-app",
         demoVideo: null,
@@ -136,7 +147,17 @@ const projects = [
         isConfidential: true
     },
     {
+        title: "Valhalla",
+        developmentDate: "Jan. 2025 - Present",
+        description: "A full-stack website built with modern web technologies, featuring a complete backend API and responsive frontend interface.",
+        technologies: ["Angular", "NestJS", "TypeScript", "HTML", "SCSS", "MongoDB", "Swagger", "Postman", "Prettier", "ESLint", "Amazon EC2", "Jest", "Jasmine", "GitLab"],
+        githubUrl: "https://github.com/Ilyes-Jamoussi/Valhalla",
+        demoVideo: null,
+        image: null
+    },
+    {
         title: "StudyScore",
+        developmentDate: "Jan. 2024 - Feb. 2024",
         description: "Full-stack web application for student grade management with user authentication and data visualization",
         technologies: ["JavaScript", "HTML5", "CSS3", "Node.js", "Express"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/StudyScore",
@@ -145,7 +166,8 @@ const projects = [
     },
     {
         title: "Chess",
-        description: "Complete chess game implementation with Qt GUI, featuring full game logic and interactive interface",
+        developmentDate: "Nov. 2023 - Dec. 2023",
+        description: "This Chess Project is a C++ application with a Qt-based graphical interface. It lets you play chess, showing valid moves for pieces and marking invalid ones in red. The project currently supports only the following chess pieces: bishop, king, and rook. You can play preconfigured games such as Topalov vs Polgar (2008), Budnikov vs Novik (1991), and Vladimorov vs Palatnik (1977).",
         technologies: ["C++", "Qt"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Chess",
         demoVideo: "videos/chess-demo.mp4", // Add your video file here
@@ -153,6 +175,7 @@ const projects = [
     },
     {
         title: "PathFinder",
+        developmentDate: "Oct. 2023 - Nov. 2023",
         description: "Advanced pathfinding algorithm implementation with visualization of different search strategies",
         technologies: ["C++"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/PathFinder",
@@ -161,6 +184,7 @@ const projects = [
     },
     {
         title: "Tetris",
+        developmentDate: "Sep. 2023 - Oct. 2023",
         description: "Classic Tetris game recreation with modern Python implementation and NumPy optimization",
         technologies: ["Python", "NumPy"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris",
@@ -171,19 +195,21 @@ const projects = [
 
 // Create project card component
 function createProjectCard(project, index) {
-    const isLongDescription = project.description.length > 500;
-    const shortDescription = isLongDescription ? project.description.substring(0, 400) : project.description;
+    const isLongDescription = project.description.length > 385;
+    const shortDescription = isLongDescription ? project.description.substring(0, 385) : project.description;
     
     return `
         <div class="project-card fade-in">
             ${project.image ? `<div class="project-image"><img src="${project.image}" alt="${project.title}"></div>` : ''}
             <div class="project-content">
-                <h3>${project.title}</h3>
+                <div class="project-header">
+                    <h3>${project.title}</h3>
+                    <span class="project-date">${project.developmentDate}</span>
+                </div>
                 <div class="description-container ${isLongDescription ? 'truncated' : ''}" id="desc-container-${index}">
                     <p id="desc-${index}" class="project-description">${shortDescription}</p>
-                    ${isLongDescription ? '<div class="fade-overlay"></div>' : ''}
                 </div>
-                ${isLongDescription ? `<button class="read-more-btn" onclick="toggleDescription(${index}, '${project.description.replace(/'/g, "\\'")}')">Full Description</button>` : ''}
+                ${isLongDescription ? `<button class="read-more-btn" onclick="toggleDescription(${index}, \`${project.description.replace(/`/g, '\\`')}\`)">Full Description</button>` : ''}
                 <div class="tech-stack">
                     ${project.technologies.map(tech => `
                         <span class="tech-item">
@@ -215,7 +241,7 @@ function toggleDescription(index, fullDescription) {
         container.classList.remove('truncated');
         button.textContent = 'Show Less';
     } else {
-        descElement.textContent = fullDescription.substring(0, 400);
+        descElement.textContent = fullDescription.substring(0, 385);
         container.classList.add('truncated');
         button.textContent = 'Full Description';
     }

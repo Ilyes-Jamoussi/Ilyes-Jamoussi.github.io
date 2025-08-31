@@ -341,22 +341,6 @@ section h2.fade-in.visible {
     overflow: hidden;
 }
 
-.fade-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(to bottom, 
-        rgba(255, 255, 255, 0) 0%, 
-        rgba(255, 255, 255, 0.2) 20%, 
-        rgba(255, 255, 255, 0.5) 40%, 
-        rgba(255, 255, 255, 0.8) 60%, 
-        rgba(255, 255, 255, 0.95) 80%, 
-        var(--card-bg) 100%);
-    pointer-events: none;
-}
-
 .description-container:not(.truncated) .fade-overlay {
     display: none;
 }
@@ -399,6 +383,27 @@ section h2.fade-in.visible {
 .project-description {
     line-height: 1.6;
     margin-bottom: 0.5rem;
+    white-space: pre-line;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-header h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+    margin-left: 1rem;
 }
 
 .project-content {
