@@ -156,24 +156,6 @@ const projects = [
         image: null
     },
     {
-        title: "StudyScore",
-        developmentDate: "Jan. 2024 - Feb. 2024",
-        description: "Full-stack web application for student grade management with user authentication and data visualization",
-        technologies: ["JavaScript", "HTML5", "CSS3", "Node.js", "Express"],
-        githubUrl: "https://github.com/Ilyes-Jamoussi/StudyScore/blob/main/README.md",
-        demoVideo: "videos/studyscore-demo.mp4", // Add your video file here
-        image: null
-    },
-    {
-        title: "Chess",
-        developmentDate: "Apr. 2024",
-        description: "This Chess Project is a C++ application with a Qt-based graphical interface. It lets you play chess, showing valid moves for pieces and marking invalid ones in red. The project currently supports only the following chess pieces: bishop, king, and rook. You can play preconfigured games such as Topalov vs Polgar (2008), Budnikov vs Novik (1991), and Vladimorov vs Palatnik (1977).",
-        technologies: ["C++", "Qt"],
-        githubUrl: "https://github.com/Ilyes-Jamoussi/Chess/blob/main/README.md",
-        demoVideo: "videos/chess-demo.mp4", // Add your video file here
-        image: null
-    },
-    {
         title: "AVR Microcontroller Robot – Embedded Systems",
         developmentDate: "Sep. 2024 - Dec. 2024",
         description: "Advanced pathfinding algorithm implementation with visualization of different search strategies",
@@ -183,12 +165,30 @@ const projects = [
         image: null
     },
     {
+        title: "Chess",
+        developmentDate: "Apr. 2024",
+        description: "This Chess Project is a C++ application with a Qt-based graphical interface. It lets you play chess, showing valid moves for pieces and marking invalid ones in red. The project currently supports only the following chess pieces: bishop, king, and rook. You can play preconfigured games such as Topalov vs Polgar (2008), Budnikov vs Novik (1991), and Vladimorov vs Palatnik (1977).",
+        technologies: ["C++", "Qt"],
+        githubUrl: "https://github.com/Ilyes-Jamoussi/Chess/blob/main/README.md",
+        demoVideo: "videos/chess-demo.mp4",
+        image: null
+    },
+    {
+        title: "StudyScore",
+        developmentDate: "Jan. 2024 - Feb. 2024",
+        description: "Full-stack web application for student grade management with user authentication and data visualization",
+        technologies: ["JavaScript", "HTML5", "CSS3", "Node.js", "Express"],
+        githubUrl: "https://github.com/Ilyes-Jamoussi/StudyScore/blob/main/README.md",
+        demoVideo: "videos/studyscore-demo.mp4",
+        image: null
+    },
+    {
         title: "Tetris",
         developmentDate: "Jun. 2023",
         description: "Classic Tetris game recreation with modern Python implementation and NumPy optimization",
         technologies: ["Python", "NumPy"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
-        demoVideo: "videos/tetris-demo.mp4", // Add your video file here
+        demoVideo: "videos/tetris-demo.mp4",
         image: null
     }
 ];
