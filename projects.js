@@ -174,7 +174,7 @@ const projects = [
         image: null
     },
     {
-        title: "PathFinder",
+        title: "AVR Microcontroller Robot – Embedded Systems",
         developmentDate: "Oct. 2023 - Nov. 2023",
         description: "Advanced pathfinding algorithm implementation with visualization of different search strategies",
         technologies: ["C++"],
