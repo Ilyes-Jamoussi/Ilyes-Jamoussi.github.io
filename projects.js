@@ -166,7 +166,7 @@ const projects = [
     },
     {
         title: "Chess",
-        developmentDate: "Nov. 2023 - Dec. 2023",
+        developmentDate: "Apr. 2024",
         description: "This Chess Project is a C++ application with a Qt-based graphical interface. It lets you play chess, showing valid moves for pieces and marking invalid ones in red. The project currently supports only the following chess pieces: bishop, king, and rook. You can play preconfigured games such as Topalov vs Polgar (2008), Budnikov vs Novik (1991), and Vladimorov vs Palatnik (1977).",
         technologies: ["C++", "Qt"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Chess/blob/main/README.md",
@@ -175,7 +175,7 @@ const projects = [
     },
     {
         title: "AVR Microcontroller Robot – Embedded Systems",
-        developmentDate: "Oct. 2023 - Nov. 2023",
+        developmentDate: "Sep. 2024 - Dec. 2024",
         description: "Advanced pathfinding algorithm implementation with visualization of different search strategies",
         technologies: ["C++"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/AVR-Microcontroller-Robot/blob/main/README.md",
@@ -184,7 +184,7 @@ const projects = [
     },
     {
         title: "Tetris",
-        developmentDate: "Sep. 2023 - Oct. 2023",
+        developmentDate: "Jun. 2023",
         description: "Classic Tetris game recreation with modern Python implementation and NumPy optimization",
         technologies: ["Python", "NumPy"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
