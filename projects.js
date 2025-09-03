@@ -147,9 +147,9 @@ const projects = [
         isConfidential: true
     },
     {
-        title: "Valhalla",
-        developmentDate: "Jan. 2025 - Present",
-        description: "A full-stack website built with modern web technologies, featuring a complete backend API and responsive frontend interface.",
+        title: "Online Multiplayer Strategy Game",
+        developmentDate: "Jan. 2025 - Apr. 2025",
+        description: "Built a full-stack web app with Angular frontend and NestJS backend using REST APIs and WebSockets for real-time interactions.",
         technologies: ["Angular", "NestJS", "TypeScript", "HTML", "SCSS", "MongoDB", "Swagger", "Postman", "Prettier", "ESLint", "Amazon EC2", "Jest", "Jasmine", "GitLab"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Valhalla/blob/main/README.md",
         demoVideo: null,
