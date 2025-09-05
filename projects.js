@@ -149,19 +149,19 @@ const projects = [
     {
         title: "Online Multiplayer Strategy Game",
         developmentDate: "Jan. 2025 - Apr. 2025",
-        description: "Built a full-stack web app with Angular frontend and NestJS backend using REST APIs and WebSockets for real-time interactions.",
+        description: "A comprehensive tactical RPG platform featuring real-time multiplayer gameplay with turn-based combat mechanics. Built with Angular frontend and NestJS backend, the application includes a complete game editor for creating custom maps and scenarios, real-time chat functionality, and support for both human and virtual players. Players navigate grid-based maps with various terrain types.",
         technologies: ["Angular", "NestJS", "TypeScript", "HTML", "SCSS", "MongoDB", "Swagger", "Postman", "Prettier", "ESLint", "Amazon EC2", "Jest", "Jasmine", "GitLab"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Valhalla/blob/main/README.md",
-        demoVideo: null,
+        demoVideo: "videos/RPG-online-strategy-game-demo.mp4",
         image: null
     },
     {
         title: "AVR Microcontroller Robot – Embedded Systems",
         developmentDate: "Sep. 2024 - Dec. 2024",
-        description: "Advanced pathfinding algorithm implementation with visualization of different search strategies",
+        description: "Autonomous navigation robot built with AVR ATmega324PA microcontroller programmed in C++. Features three operational modes: endpoint detection with orientation tracking, post-following with precise distance control, and comprehensive journey reporting. Integrates multiple sensors including line markers, infrared distance sensors, and actuators for LED indicators and sound feedback.",
         technologies: ["C++"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/AVR-Microcontroller-Robot/blob/main/README.md",
-        demoVideo: "videos/pathfinder-demo.mp4", // Add your video file here
+        demoVideo: "videos/pathfinder-demo.mp4",
         image: null
     },
     {
@@ -174,18 +174,9 @@ const projects = [
         image: null
     },
     {
-        title: "StudyScore",
-        developmentDate: "Jan. 2024 - Feb. 2024",
-        description: "Full-stack web application for student grade management with user authentication and data visualization",
-        technologies: ["JavaScript", "HTML5", "CSS3", "Node.js", "Express"],
-        githubUrl: "https://github.com/Ilyes-Jamoussi/StudyScore/blob/main/README.md",
-        demoVideo: "videos/studyscore-demo.mp4",
-        image: null
-    },
-    {
         title: "Tetris",
         developmentDate: "Jun. 2023",
-        description: "Classic Tetris game recreation with modern Python implementation and NumPy optimization",
+        description: "Classic Tetris game recreation implemented in Python with Pygame and NumPy optimization. Features complete tetromino manipulation, line clearing mechanics, and collision detection with smooth gameplay experience. Includes comprehensive unit testing suite to validate game logic and ensure reliable performance across different scenarios.",
         technologies: ["Python", "NumPy"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
         demoVideo: "videos/tetris-demo.mp4",
