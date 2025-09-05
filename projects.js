@@ -137,7 +137,7 @@ const projects = [
     {
         title: "Online Multiplayer Strategy Game",
         developmentDate: "Jan. 2025 - Apr. 2025",
-        description: "A comprehensive tactical RPG platform featuring real-time multiplayer gameplay with turn-based combat mechanics. Built with Angular frontend and NestJS backend, the application includes a complete game editor for creating custom maps and scenarios, real-time chat functionality, and support for both human and virtual players. Players navigate grid-based maps with various terrain types.",
+        description: "A comprehensive tactical RPG platform featuring real-time multiplayer gameplay with turn-based combat mechanics. Built with Angular frontend and NestJS backend, the application includes a game editor for creating custom maps and scenarios, real-time chat functionality, and support for both human and virtual players. Players navigate grid-based maps with various terrain types.",
         technologies: ["Angular", "NestJS", "TypeScript", "HTML", "SCSS", "MongoDB", "Swagger", "Postman", "Prettier", "ESLint", "Amazon EC2", "Jest", "Jasmine", "GitLab"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Valhalla/blob/main/README.md",
         demoVideo: "videos/RPG-online-strategy-game-demo.mp4",
