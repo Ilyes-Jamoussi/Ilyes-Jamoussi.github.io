@@ -12,48 +12,18 @@ const skillsCategories = {
         { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", link: "https://www.w3.org/Style/CSS/" },
         { name: "SCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", link: "https://sass-lang.com/" },
         { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", link: "https://react.dev/" },
-        { name: "Angular", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", link: "https://angular.dev/" }
+        { name: "Angular", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", link: "https://angular.dev/" },
+        { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", link: "https://reactnative.dev/" },
+        { name: "Expo", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg", link: "https://expo.dev/" }
     ],
-    "Backend & APIs": [
+    "Backend": [
         { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", link: "https://nodejs.org/" },
         { name: "NestJS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg", link: "https://nestjs.com/" },
         { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", link: "https://expressjs.com/" },
         { name: "REST API", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg", link: "https://en.wikipedia.org/wiki/REST" },
         { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg", link: "https://graphql.org/" },
-        { name: "Socket.io", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg", link: "https://socket.io/" }
-    ],
-    "Mobile": [
-        { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", link: "https://reactnative.dev/" },
-        { name: "Expo", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg", link: "https://expo.dev/" }
-    ],
-    "Database & Cloud": [
+        { name: "Socket.io", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg", link: "https://socket.io/" },
         { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", link: "https://www.mongodb.com/" }
-    ],
-    "DevOps & Version Control": [
-        { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", link: "https://git-scm.com/" },
-        { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", link: "https://github.com/" },
-        { name: "GitLab", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg", link: "https://gitlab.com/" }
-    ],
-    "IDEs": [
-        { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", link: "https://code.visualstudio.com/" },
-        { name: "Visual Studio", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg", link: "https://visualstudio.microsoft.com/" },
-        { name: "IntelliJ IDEA", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg", link: "https://www.jetbrains.com/idea/" }
-    ],
-    "Testing & Quality": [
-        { name: "Jest", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg", link: "https://jestjs.io/" },
-        { name: "Cypress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg", link: "https://www.cypress.io/" },
-        { name: "Jasmine", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jasmine/jasmine-original.svg", link: "https://jasmine.github.io/" },
-        { name: "ESLint", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg", link: "https://eslint.org/" },
-        { name: "Prettier", logo: "https://raw.githubusercontent.com/prettier/prettier/main/website/static/icon.png", link: "https://prettier.io/" }
-    ],
-    "Design & Documentation": [
-        { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", link: "https://www.figma.com/" },
-        { name: "Swagger", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg", link: "https://swagger.io/" },
-        { name: "Postman", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", link: "https://www.postman.com/" }
-    ],
-    "Desktop & Data": [
-        { name: "Qt", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg", link: "https://www.qt.io/" },
-        { name: "NumPy", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", link: "https://numpy.org/" }
     ],
     "AWS Services": [
         { name: "Amazon Cognito", logo: "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-cognito.svg", link: "https://aws.amazon.com/cognito/" },
@@ -93,6 +63,24 @@ const skillsCategories = {
         { name: "Amazon Translate", logo: "assets/aws-icons/amazon-translate.svg", link: "https://aws.amazon.com/translate/" },
         { name: "Amazon Lex", logo: "assets/aws-icons/amazon-lex.svg", link: "https://aws.amazon.com/lex/" },
         { name: "Amazon Q", logo: "assets/aws-icons/amazon-q.svg", link: "https://aws.amazon.com/q/" }
+    ],
+    "Development Tools": [
+        { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", link: "https://git-scm.com/" },
+        { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", link: "https://github.com/" },
+        { name: "GitLab", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg", link: "https://gitlab.com/" },
+        { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", link: "https://code.visualstudio.com/" },
+        { name: "Visual Studio", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg", link: "https://visualstudio.microsoft.com/" },
+        { name: "IntelliJ IDEA", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg", link: "https://www.jetbrains.com/idea/" },
+        { name: "Jest", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg", link: "https://jestjs.io/" },
+        { name: "Cypress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg", link: "https://www.cypress.io/" },
+        { name: "Jasmine", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jasmine/jasmine-original.svg", link: "https://jasmine.github.io/" },
+        { name: "ESLint", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg", link: "https://eslint.org/" },
+        { name: "Prettier", logo: "https://raw.githubusercontent.com/prettier/prettier/main/website/static/icon.png", link: "https://prettier.io/" },
+        { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", link: "https://www.figma.com/" },
+        { name: "Swagger", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg", link: "https://swagger.io/" },
+        { name: "Postman", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", link: "https://www.postman.com/" },
+        { name: "Qt", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg", link: "https://www.qt.io/" },
+        { name: "NumPy", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", link: "https://numpy.org/" }
     ]
 };
 
