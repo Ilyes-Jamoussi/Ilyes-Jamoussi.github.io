@@ -201,7 +201,11 @@ function createProjectCard(project, index) {
                     ${project.isConfidential ? 
                         `<button class="demo-btn confidential-btn" onclick="showConfidentialModal()">Confidential Project</button>
                          <button class="demo-btn architecture-btn" onclick="showArchitectureDiagram()">View Serverless Cloud Architecture</button>` :
-                        `<button class="demo-btn" onclick="openDemo('${project.demoVideo}', '${project.title}')">View Demo</button>
+                        `${project.liveUrl ? 
+                            `<a href="${project.liveUrl}" target="_blank" class="demo-btn">Live Demo</a>` :
+                            project.demoVideo ? 
+                            `<button class="demo-btn" onclick="openDemo('${project.demoVideo}', '${project.title}')">View Demo</button>` : ''
+                         }
                          <a href="${project.githubUrl}" target="_blank">View Code</a>`
                     }
                 </div>
