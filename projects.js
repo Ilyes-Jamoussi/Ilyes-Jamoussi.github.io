@@ -139,7 +139,7 @@ const projects = [
         developmentDate: "Jan. 2025 - Apr. 2025",
         description: "A comprehensive tactical RPG platform featuring real-time multiplayer gameplay with turn-based combat mechanics. Built with Angular frontend and NestJS backend, the application includes a game editor for creating custom maps and scenarios, real-time chat functionality, and support for both human and virtual players. Players navigate grid-based maps with various terrain types.",
         technologies: ["Angular", "NestJS", "TypeScript", "HTML", "SCSS", "MongoDB", "Socket.IO", "Swagger", "Postman", "Prettier", "ESLint", "Amazon EC2", "Render", "Jest", "Jasmine", "GitLab", "GitHub"],
-        githubUrl: "https://github.com/Ilyes-Jamoussi/Online-Multiplayer-RPG-Platform",
+        githubUrl: "https://github.com/Ilyes-Jamoussi/Online-Multiplayer-RPG-Platform/blob/main/README.md",
         liveUrl: "https://rpg-platform-frontend.onrender.com",
         image: null
     },
