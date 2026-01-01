@@ -174,10 +174,10 @@ const projects = [
     {
         title: "Tetris",
         developmentDate: "Jun. 2023 - Jan. 2026",
-        description: "Modern implementation of the classic Tetris game featuring a sleek cyberpunk design with neon effects and smooth animations. Built with vanilla JavaScript ES6 modules and deployed on Netlify. Features include particle system for line clear animations, real-time score tracking with localStorage, responsive design for desktop and mobile, and modular architecture with 7 independent modules. Also includes a Python desktop version with Pygame for offline play.",
-        technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Python", "Pygame", "NumPy", "Netlify"],
+        description: "Modern implementation of the classic Tetris game featuring a sleek cyberpunk design with neon effects and smooth animations. Built with vanilla JavaScript ES6 modules and deployed on GitHub Pages. Features include particle system for line clear animations, real-time score tracking with localStorage, responsive design for desktop and mobile, and modular architecture with 7 independent modules. Also includes a Python desktop version with Pygame for offline play.",
+        technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Python", "Pygame", "NumPy"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
-        liveUrl: "https://tetris-game-project.netlify.app",
+        liveUrl: "https://ilyes-jamoussi.github.io/Tetris/",
         demoVideo: "videos/tetris-demo.mp4",
         image: null
     }
