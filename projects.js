@@ -194,7 +194,7 @@ function createProjectCard(project, index) {
             <div class="project-content">
                 <div class="project-header">
                     <h3>${project.title}</h3>
-                    <span class="project-date">${project.developmentDate}</span>
+                    ${project.developmentDate ? `<span class="project-date">${project.developmentDate}</span>` : ''}
                 </div>
                 <div class="description-container ${isLongDescription ? 'truncated' : ''}" id="desc-container-${index}">
                     <p id="desc-${index}" class="project-description">${shortDescription}</p>
