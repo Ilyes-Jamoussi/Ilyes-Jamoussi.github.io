@@ -136,7 +136,7 @@ const techLogos = {
 const projects = [
     {
         title: "Serverless iOS & Android Mobile App",
-        developmentDate: "May 2025 - Aug. 2025",
+        developmentDate: null,
         description: "A cross-platform mobile solution that fully digitizes field technicians' operations by connecting them with dispatchers in real time while ensuring seamless work in low-connectivity environments. It provides a complete workflow where dispatchers can assign and monitor tasks, and technicians can receive work orders, update their status, and report completion directly through the app.\n\nA dual inventory system combines a shared central depot with each technician's personal suitcase, enabling accurate tracking of parts taken, transported, and used. To make this process faster and more reliable, the app integrates barcode scanning, allowing quick registration of items with minimal errors. Technicians can also consult available parts in both their suitcase and the depot, making resource planning easier.\n\nThey are further able to capture and upload photo documentation as proof of work or to report issues, ensuring transparency and accountability in operations. The application is designed with offline-first synchronization, so technicians can continue working seamlessly without network coverage. Once a connection is restored, all data synchronizes automatically, ensuring continuity and reliability.\n\nFinally, an AI-powered assistant supports technicians by simplifying documentation and reporting. It automates repetitive entries and generates summaries, reducing administrative effort and allowing field workers to focus on their core tasks.",
         technologies: ["React Native", "Expo", "TypeScript", "Jest", "ESLint", "Prettier", "GitLab", "AWS Amplify", "AWS AppSync", "DynamoDB", "Amazon Cognito", "Amazon S3", "Amazon Bedrock", "Amazon Location Service", "AWS Lambda"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/mobile-fullstack-app/blob/main/README.md",
@@ -146,7 +146,7 @@ const projects = [
     },
     {
         title: "Manor Tactics - Online Multiplayer RPG Platform",
-        developmentDate: "Jan. 2025 - Apr. 2025",
+        developmentDate: null,
         description: "A comprehensive tactical RPG platform featuring real-time multiplayer gameplay with turn-based combat mechanics. Built with Angular frontend and NestJS backend, the application includes a game editor for creating custom maps and scenarios, real-time chat functionality, and support for both human and virtual players. Players navigate grid-based maps with various terrain types.",
         technologies: ["Angular", "NestJS", "TypeScript", "HTML", "SCSS", "MongoDB", "Socket.io", "Swagger", "Postman", "Prettier", "ESLint", "Amazon EC2", "Nginx", "PM2", "GitHub Actions", "Jest", "Jasmine", "GitLab", "GitHub"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Online-Multiplayer-RPG-Platform/blob/master/README.md",
@@ -155,7 +155,7 @@ const projects = [
     },
     {
         title: "Tetris",
-        developmentDate: "Jun. 2023 - Jan. 2026",
+        developmentDate: null,
         description: "Modern implementation of the classic Tetris game featuring a sleek cyberpunk design with neon effects and smooth animations. Built with vanilla JavaScript ES6 modules and deployed on GitHub Pages. Features include particle system for line clear animations, real-time score tracking with localStorage, responsive design for desktop and mobile, and modular architecture with 7 independent modules. Also includes a Python desktop version with Pygame for offline play.",
         technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Python", "Pygame", "NumPy"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
@@ -165,7 +165,7 @@ const projects = [
     },
     {
         title: "AVR Microcontroller Robot – Embedded Systems",
-        developmentDate: "Sep. 2024 - Dec. 2024",
+        developmentDate: null,
         description: "Autonomous navigation robot built with AVR ATmega324PA microcontroller programmed in C++. Features three operational modes: endpoint detection with orientation tracking, post-following with precise distance control, and comprehensive journey reporting. Integrates multiple sensors including line markers, infrared distance sensors, and actuators for LED indicators and sound feedback.",
         technologies: ["C++"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/AVR-Microcontroller-Robot/blob/main/README.md",
@@ -174,7 +174,7 @@ const projects = [
     },
     {
         title: "Chess",
-        developmentDate: "Apr. 2024",
+        developmentDate: null,
         description: "This Chess Project is a C++ application with a Qt-based graphical interface. It lets you play chess, showing valid moves for pieces and marking invalid ones in red. The project currently supports only the following chess pieces: bishop, king, and rook. You can play preconfigured games such as Topalov vs Polgar (2008), Budnikov vs Novik (1991), and Vladimorov vs Palatnik (1977).",
         technologies: ["C++", "Qt"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Chess/blob/main/README.md",
