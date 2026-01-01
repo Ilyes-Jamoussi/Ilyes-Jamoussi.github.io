@@ -154,6 +154,16 @@ const projects = [
         image: null
     },
     {
+        title: "Tetris",
+        developmentDate: "Jun. 2023 - Jan. 2026",
+        description: "Modern implementation of the classic Tetris game featuring a sleek cyberpunk design with neon effects and smooth animations. Built with vanilla JavaScript ES6 modules and deployed on GitHub Pages. Features include particle system for line clear animations, real-time score tracking with localStorage, responsive design for desktop and mobile, and modular architecture with 7 independent modules. Also includes a Python desktop version with Pygame for offline play.",
+        technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Python", "Pygame", "NumPy"],
+        githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
+        liveUrl: "https://ilyes-jamoussi.github.io/Tetris/",
+        demoVideo: "videos/tetris-demo.mp4",
+        image: null
+    },
+    {
         title: "AVR Microcontroller Robot – Embedded Systems",
         developmentDate: "Sep. 2024 - Dec. 2024",
         description: "Autonomous navigation robot built with AVR ATmega324PA microcontroller programmed in C++. Features three operational modes: endpoint detection with orientation tracking, post-following with precise distance control, and comprehensive journey reporting. Integrates multiple sensors including line markers, infrared distance sensors, and actuators for LED indicators and sound feedback.",
@@ -169,16 +179,6 @@ const projects = [
         technologies: ["C++", "Qt"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Chess/blob/main/README.md",
         demoVideo: "videos/chess-demo.mp4",
-        image: null
-    },
-    {
-        title: "Tetris",
-        developmentDate: "Jun. 2023 - Jan. 2026",
-        description: "Modern implementation of the classic Tetris game featuring a sleek cyberpunk design with neon effects and smooth animations. Built with vanilla JavaScript ES6 modules and deployed on GitHub Pages. Features include particle system for line clear animations, real-time score tracking with localStorage, responsive design for desktop and mobile, and modular architecture with 7 independent modules. Also includes a Python desktop version with Pygame for offline play.",
-        technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Python", "Pygame", "NumPy"],
-        githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
-        liveUrl: "https://ilyes-jamoussi.github.io/Tetris/",
-        demoVideo: "videos/tetris-demo.mp4",
         image: null
     }
 ];
