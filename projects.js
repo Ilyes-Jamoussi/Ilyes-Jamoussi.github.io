@@ -156,8 +156,8 @@ const projects = [
     {
         title: "Tetris",
         developmentDate: null,
-        description: "Modern implementation of the classic Tetris game featuring a sleek cyberpunk design with neon effects and smooth animations. Built with vanilla JavaScript ES6 modules and deployed on GitHub Pages. Features include particle system for line clear animations, real-time score tracking with localStorage, responsive design for desktop and mobile, and modular architecture with 7 independent modules. Also includes a Python desktop version with Pygame for offline play.",
-        technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Python", "Pygame", "NumPy"],
+        description: "Professional Tetris implementation featuring modern web technologies and clean architecture. Built with vanilla JavaScript ES6 modules, utilizing HTML5 Canvas for rendering and Web Audio API for dynamic sound synthesis. Implements two game modes (Modern with hold piece and ghost preview, Classic for traditional gameplay) with separate leaderboards. Features include state machine pattern for game flow, modular architecture with 11 independent modules (~1500 lines), real-time audio system with background music and context-aware sound effects, interactive adaptive tutorial system, and comprehensive settings with localStorage persistence. Demonstrates expertise in game development, audio programming, and responsive design patterns.",
+        technologies: ["JavaScript ES6", "HTML5 Canvas", "CSS3", "Web Audio API", "LocalStorage", "Python", "Pygame"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
         liveUrl: "https://ilyes-jamoussi.github.io/Tetris/",
         demoVideo: "videos/tetris-demo.mp4",
