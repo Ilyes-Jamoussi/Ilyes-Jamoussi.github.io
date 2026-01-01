@@ -129,6 +129,10 @@ const techLogos = {
     "NumPy": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
     "Pygame": "https://www.pygame.org/docs/_static/pygame_tiny.png",
     "Canvas API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "HTML5 Canvas": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "Web Audio API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "JavaScript ES6": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "LocalStorage": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "Netlify": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg"
 };
 
@@ -157,7 +161,7 @@ const projects = [
         title: "Tetris",
         developmentDate: null,
         description: "Professional Tetris implementation featuring modern web technologies and clean architecture. Built with vanilla JavaScript ES6 modules, utilizing HTML5 Canvas for rendering and Web Audio API for dynamic sound synthesis. Implements two game modes (Modern with hold piece and ghost preview, Classic for traditional gameplay) with separate leaderboards. Features include state machine pattern for game flow, modular architecture with 11 independent modules (~1500 lines), real-time audio system with background music and context-aware sound effects, interactive adaptive tutorial system, and comprehensive settings with localStorage persistence. Demonstrates expertise in game development, audio programming, and responsive design patterns.",
-        technologies: ["JavaScript ES6", "HTML5 Canvas", "CSS3", "Web Audio API", "LocalStorage", "Python", "Pygame"],
+        technologies: ["JavaScript ES6", "HTML5", "CSS3", "HTML5 Canvas", "Web Audio API", "LocalStorage", "Python", "Pygame", "NumPy"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
         liveUrl: "https://ilyes-jamoussi.github.io/Tetris/",
         demoVideo: "videos/tetris-demo.mp4",
