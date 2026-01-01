@@ -80,7 +80,9 @@ const skillsCategories = {
         { name: "Swagger", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg", link: "https://swagger.io/" },
         { name: "Postman", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", link: "https://www.postman.com/" },
         { name: "Qt", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg", link: "https://www.qt.io/" },
-        { name: "NumPy", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", link: "https://numpy.org/" }
+        { name: "NumPy", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", link: "https://numpy.org/" },
+        { name: "Pygame", logo: "https://www.pygame.org/docs/_static/pygame_tiny.png", link: "https://www.pygame.org/" },
+        { name: "Netlify", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg", link: "https://www.netlify.com/" }
     ]
 };
 
@@ -124,7 +126,10 @@ const techLogos = {
     "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
     "Qt": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg",
     "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    "NumPy": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+    "NumPy": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+    "Pygame": "https://www.pygame.org/docs/_static/pygame_tiny.png",
+    "Canvas API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "Netlify": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg"
 };
 
 // Project data
@@ -168,10 +173,11 @@ const projects = [
     },
     {
         title: "Tetris",
-        developmentDate: "Jun. 2023",
-        description: "Classic Tetris game recreation implemented in Python with Pygame and NumPy optimization. Features complete tetromino manipulation, line clearing mechanics, and collision detection with smooth gameplay experience. Includes comprehensive unit testing suite to validate game logic and ensure reliable performance across different scenarios.",
-        technologies: ["Python", "NumPy"],
+        developmentDate: "Jun. 2023 - Jan. 2026",
+        description: "Modern implementation of the classic Tetris game featuring a sleek cyberpunk design with neon effects and smooth animations. Built with vanilla JavaScript ES6 modules and deployed on Netlify. Features include particle system for line clear animations, real-time score tracking with localStorage, responsive design for desktop and mobile, and modular architecture with 7 independent modules. Also includes a Python desktop version with Pygame for offline play.",
+        technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Python", "Pygame", "NumPy", "Netlify"],
         githubUrl: "https://github.com/Ilyes-Jamoussi/Tetris/blob/main/README.md",
+        liveUrl: "https://tetris-game-project.netlify.app",
         demoVideo: "videos/tetris-demo.mp4",
         image: null
     }
