@@ -149,15 +149,6 @@ const techLogos = {
 // Project data
 const projects = [
     {
-        title: "MailGuard AI – Email Spam Detector",
-        developmentDate: null,
-        description: "An AI-powered email spam detection system built around a Transformer neural network implemented entirely from scratch using PyTorch. The model processes raw email text through a custom tokenizer (30K vocabulary), positional encoding, and 4 Transformer encoder blocks with multi-head self-attention (8 heads), achieving 97.7% accuracy on a test set of 1,138 real emails. Trained on 7,584 emails from the SpamAssassin and Enron corpora using AdamW optimizer with cosine annealing learning rate schedule and class-weighted cross-entropy loss to handle data imbalance. No pre-trained models or external ML frameworks (HuggingFace, etc.) were used — every component (multi-head attention, layer normalization, feed-forward networks, positional encoding) is coded manually. The model (10.9M parameters) was trained on Google Colab (T4 GPU) and deployed as a web application on Streamlit Community Cloud.",
-        technologies: ["Python", "PyTorch", "NumPy", "scikit-learn", "Streamlit", "Google Colab"],
-        githubUrl: "https://github.com/Ilyes-Jamoussi/mailguard-ai/blob/main/README.md",
-        liveUrl: "https://mailguard-ai.streamlit.app",
-        image: null
-    },
-    {
         title: "Serverless iOS & Android Mobile App",
         developmentDate: null,
         description: "A cross-platform mobile solution that fully digitizes field technicians' operations by connecting them with dispatchers in real time while ensuring seamless work in low-connectivity environments. It provides a complete workflow where dispatchers can assign and monitor tasks, and technicians can receive work orders, update their status, and report completion directly through the app.\n\nA dual inventory system combines a shared central depot with each technician's personal suitcase, enabling accurate tracking of parts taken, transported, and used. To make this process faster and more reliable, the app integrates barcode scanning, allowing quick registration of items with minimal errors. Technicians can also consult available parts in both their suitcase and the depot, making resource planning easier.\n\nThey are further able to capture and upload photo documentation as proof of work or to report issues, ensuring transparency and accountability in operations. The application is designed with offline-first synchronization, so technicians can continue working seamlessly without network coverage. Once a connection is restored, all data synchronizes automatically, ensuring continuity and reliability.\n\nFinally, an AI-powered assistant supports technicians by simplifying documentation and reporting. It automates repetitive entries and generates summaries, reducing administrative effort and allowing field workers to focus on their core tasks.",
@@ -166,6 +157,15 @@ const projects = [
         demoVideo: null,
         image: null,
         isConfidential: true
+    },
+    {
+        title: "MailGuard AI – Email Spam Detector",
+        developmentDate: null,
+        description: "An AI-powered email spam detection system built around a Transformer neural network implemented entirely from scratch using PyTorch. The model processes raw email text through a custom tokenizer (30K vocabulary), positional encoding, and 4 Transformer encoder blocks with multi-head self-attention (8 heads), achieving 97.7% accuracy on a test set of 1,138 real emails. Trained on 7,584 emails from the SpamAssassin and Enron corpora using AdamW optimizer with cosine annealing learning rate schedule and class-weighted cross-entropy loss to handle data imbalance. No pre-trained models or external ML frameworks (HuggingFace, etc.) were used — every component (multi-head attention, layer normalization, feed-forward networks, positional encoding) is coded manually. The model (10.9M parameters) was trained on Google Colab (T4 GPU) and deployed as a web application on Streamlit Community Cloud.",
+        technologies: ["Python", "PyTorch", "NumPy", "scikit-learn", "Streamlit", "Google Colab"],
+        githubUrl: "https://github.com/Ilyes-Jamoussi/mailguard-ai/blob/main/README.md",
+        liveUrl: "https://mailguard-ai.streamlit.app",
+        image: null
     },
     {
         title: "Manor Tactics - Online Multiplayer RPG Platform",
