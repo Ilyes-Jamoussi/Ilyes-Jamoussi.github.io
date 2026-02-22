@@ -82,7 +82,13 @@ const skillsCategories = {
         { name: "Qt", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg", link: "https://www.qt.io/" },
         { name: "NumPy", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", link: "https://numpy.org/" },
         { name: "Pygame", logo: "https://www.pygame.org/docs/_static/pygame_tiny.png", link: "https://www.pygame.org/" },
-        { name: "Netlify", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg", link: "https://www.netlify.com/" }
+        { name: "Netlify", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg", link: "https://www.netlify.com/" },
+        { name: "Google Colab", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg", link: "https://colab.research.google.com/" }
+    ],
+    "AI / ML": [
+        { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", link: "https://pytorch.org/" },
+        { name: "scikit-learn", logo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg", link: "https://scikit-learn.org/" },
+        { name: "Streamlit", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg", link: "https://streamlit.io/" }
     ]
 };
 
@@ -133,11 +139,24 @@ const techLogos = {
     "Web Audio API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "JavaScript ES6": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "LocalStorage": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    "Netlify": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg"
+    "Netlify": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg",
+    "PyTorch": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
+    "scikit-learn": "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
+    "Streamlit": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg",
+    "Google Colab": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg"
 };
 
 // Project data
 const projects = [
+    {
+        title: "MailGuard AI – Email Spam Detector",
+        developmentDate: null,
+        description: "An AI-powered email spam detection system built around a Transformer neural network implemented entirely from scratch using PyTorch. The model processes raw email text through a custom tokenizer (30K vocabulary), positional encoding, and 4 Transformer encoder blocks with multi-head self-attention (8 heads), achieving 97.7% accuracy on a test set of 1,138 real emails. Trained on 7,584 emails from the SpamAssassin and Enron corpora using AdamW optimizer with cosine annealing learning rate schedule and class-weighted cross-entropy loss to handle data imbalance. No pre-trained models or external ML frameworks (HuggingFace, etc.) were used — every component (multi-head attention, layer normalization, feed-forward networks, positional encoding) is coded manually. The model (10.9M parameters) was trained on Google Colab (T4 GPU) and deployed as a web application on Streamlit Community Cloud.",
+        technologies: ["Python", "PyTorch", "NumPy", "scikit-learn", "Streamlit", "Google Colab"],
+        githubUrl: "https://github.com/Ilyes-Jamoussi/mailguard-ai/blob/main/README.md",
+        liveUrl: "https://mailguard-ai.streamlit.app",
+        image: null
+    },
     {
         title: "Serverless iOS & Android Mobile App",
         developmentDate: null,
