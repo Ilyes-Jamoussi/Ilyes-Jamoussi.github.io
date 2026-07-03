@@ -39,10 +39,10 @@ async function font(pkgPath: string): Promise<Buffer> {
   return readFile(require.resolve(pkgPath));
 }
 
-const [inter400, inter500, inter600] = await Promise.all([
+const [inter400, inter500, sourceSerif600] = await Promise.all([
   font("@fontsource/inter/files/inter-latin-400-normal.woff"),
   font("@fontsource/inter/files/inter-latin-500-normal.woff"),
-  font("@fontsource/inter/files/inter-latin-600-normal.woff"),
+  font("@fontsource/source-serif-4/files/source-serif-4-latin-600-normal.woff"),
 ]);
 
 const ink = "#111114";
@@ -61,7 +61,12 @@ async function renderPng(
     fonts: [
       { name: "Inter", data: inter400, weight: 400, style: "normal" },
       { name: "Inter", data: inter500, weight: 500, style: "normal" },
-      { name: "Inter", data: inter600, weight: 600, style: "normal" },
+      {
+        name: "Source Serif 4",
+        data: sourceSerif600,
+        weight: 600,
+        style: "normal",
+      },
     ],
   });
   const resvg = new Resvg(svg, { fitTo: { mode: "width", value: width } });
@@ -104,10 +109,11 @@ const ogNode = el(
       {
         style: {
           color: paper,
-          fontSize: 92,
+          fontFamily: "Source Serif 4",
+          fontSize: 96,
           fontWeight: 600,
           marginTop: 28,
-          letterSpacing: -3,
+          letterSpacing: -1,
         },
       },
       "Ilyes Jamoussi",
@@ -148,7 +154,7 @@ function monogram(radius: number, fontSize: number): ReactNode {
         backgroundColor: ink,
         borderRadius: radius,
         color: paper,
-        fontFamily: "Inter",
+        fontFamily: "Source Serif 4",
         fontSize,
         fontWeight: 600,
       },
@@ -166,7 +172,14 @@ await writeFile(path.join(publicDir, "apple-touch-icon.png"), touchIcon);
 const faviconSvg = await satori(monogram(13, 34), {
   width: 64,
   height: 64,
-  fonts: [{ name: "Inter", data: inter600, weight: 600, style: "normal" }],
+  fonts: [
+    {
+      name: "Source Serif 4",
+      data: sourceSerif600,
+      weight: 600,
+      style: "normal",
+    },
+  ],
 });
 await writeFile(path.join(publicDir, "favicon.svg"), faviconSvg);
 

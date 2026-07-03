@@ -1,5 +1,8 @@
 ---
+import DemoVideo from "../components/DemoVideo.astro";
 import ExtLink from "../components/ExtLink.astro";
+import MatrixTable from "../components/MatrixTable.astro";
+import PipelineDiagram from "../components/PipelineDiagram.astro";
 import {
   certifications,
   education,
@@ -9,7 +12,6 @@ import {
   github,
   hero,
   linkedin,
-  moreProjects,
   projects,
   skills,
 } from "../data/resume";
@@ -17,8 +19,8 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-  <div class="container">
-    <section class="hero" aria-label="Introduction">
+  <section class="hero" aria-label="Introduction">
+    <div class="container">
       <p class="kicker">{hero.kicker}</p>
       <h1>Ilyes Jamoussi</h1>
       <p class="lede">{hero.lede}</p>
@@ -30,31 +32,11 @@ import Base from "../layouts/Base.astro";
         <ExtLink href={linkedin}>LinkedIn</ExtLink>
         <a href={`mailto:${email}`}>Email</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="work" class="section" aria-labelledby="work-title">
-      <h2 class="section-title" id="work-title">Experience</h2>
-      <div class="entries">
-        {
-          experience.map((entry) => (
-            <article class="entry">
-              <p class="entry-period">{entry.period}</p>
-              <div>
-                <h3 class="entry-org">{entry.org}</h3>
-                <p class="entry-role">{entry.role}</p>
-                <ul class="entry-bullets">
-                  {entry.bullets.map((bullet) => (
-                    <li>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-          ))
-        }
-      </div>
-    </section>
-
-    <section id="projects" class="section" aria-labelledby="projects-title">
+  <section id="projects" class="section" aria-labelledby="projects-title">
+    <div class="container container--wide">
       <h2 class="section-title" id="projects-title">Selected projects</h2>
       <ol class="projects">
         {
@@ -76,6 +58,17 @@ import Base from "../layouts/Base.astro";
                     <li>{bullet}</li>
                   ))}
                 </ul>
+                {project.sample && (
+                  <figure class="sample">
+                    <blockquote class="sample-text">
+                      “{project.sample.text}”
+                    </blockquote>
+                    <figcaption class="sample-caption">
+                      prompt “{project.sample.prompt}” ·{" "}
+                      {project.sample.settings}
+                    </figcaption>
+                  </figure>
+                )}
                 <p class="project-meta">
                   {project.metrics.length > 0 && (
                     <span class="project-metrics">
@@ -85,27 +78,52 @@ import Base from "../layouts/Base.astro";
                   <span class="project-stack">{project.stack.join(" · ")}</span>
                 </p>
               </div>
+              {(project.video ??
+                project.diagram ??
+                project.confusionMatrix) && (
+                <div class="project-media">
+                  {project.video && <DemoVideo video={project.video} />}
+                  {project.diagram === "minigpt-pipeline" && (
+                    <PipelineDiagram />
+                  )}
+                  {project.confusionMatrix && (
+                    <MatrixTable matrix={project.confusionMatrix} />
+                  )}
+                </div>
+              )}
             </li>
           ))
         }
       </ol>
-      <ul class="more-list">
+    </div>
+  </section>
+
+  <section id="work" class="section" aria-labelledby="work-title">
+    <div class="container">
+      <h2 class="section-title" id="work-title">Experience</h2>
+      <div class="entries">
         {
-          moreProjects.map((project) => (
-            <li>
-              <span class="more-name">{project.name}</span> —{" "}
-              {project.bullets[0]}
-              <span class="more-links">
-                <ExtLink href={project.repo}>code</ExtLink>
-                {project.demo && <ExtLink href={project.demo}>play</ExtLink>}
-              </span>
-            </li>
+          experience.map((entry) => (
+            <article class="entry">
+              <p class="entry-period">{entry.period}</p>
+              <div>
+                <h3 class="entry-org">{entry.org}</h3>
+                <p class="entry-role">{entry.role}</p>
+                <ul class="entry-bullets">
+                  {entry.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
           ))
         }
-      </ul>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="education" class="section" aria-labelledby="education-title">
+  <section id="education" class="section" aria-labelledby="education-title">
+    <div class="container">
       <h2 class="section-title" id="education-title">
         Education & certifications
       </h2>
@@ -117,11 +135,6 @@ import Base from "../layouts/Base.astro";
               <div>
                 <h3 class="entry-org">{entry.school}</h3>
                 <p class="entry-role">{entry.degree}</p>
-                {entry.detail && (
-                  <ul class="entry-bullets">
-                    <li>{entry.detail}</li>
-                  </ul>
-                )}
               </div>
             </article>
           ))
@@ -140,13 +153,15 @@ import Base from "../layouts/Base.astro";
           ))
         }
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section
-      id="extracurriculars"
-      class="section"
-      aria-labelledby="extracurriculars-title"
-    >
+  <section
+    id="extracurriculars"
+    class="section"
+    aria-labelledby="extracurriculars-title"
+  >
+    <div class="container">
       <h2 class="section-title" id="extracurriculars-title">
         Extracurriculars
       </h2>
@@ -168,9 +183,11 @@ import Base from "../layouts/Base.astro";
           ))
         }
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="skills" class="section" aria-labelledby="skills-title">
+  <section id="skills" class="section" aria-labelledby="skills-title">
+    <div class="container">
       <h2 class="section-title" id="skills-title">Skills</h2>
       <dl class="skills-list">
         {
@@ -182,9 +199,11 @@ import Base from "../layouts/Base.astro";
           ))
         }
       </dl>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="section" aria-labelledby="contact-title">
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="container">
       <h2 class="section-title" id="contact-title">Contact</h2>
       <p class="contact-lede">
         I’m looking for software engineering and machine learning internships.
@@ -199,6 +218,6 @@ import Base from "../layouts/Base.astro";
           </ExtLink>
         </li>
       </ul>
-    </section>
-  </div>
+    </div>
+  </section>
 </Base>

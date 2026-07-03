@@ -1,0 +1,121 @@
+---
+/**
+ * MiniGPT inference pipeline, as a themable inline SVG.
+ * Colors come from the design tokens, so it adapts to dark mode for free.
+ */
+---
+
+<svg
+  class="pipeline-diagram"
+  viewBox="0 0 260 400"
+  role="img"
+  aria-label="MiniGPT pipeline: prompt text goes through a byte-level BPE tokenizer with an 8,192-token vocabulary, six decoder blocks with causal multi-head attention, autoregressive sampling, and a FastAPI server that streams tokens live over server-sent events."
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>MiniGPT inference pipeline</title>
+
+  <!-- prompt -->
+  <rect class="d-box d-box--dashed" rx="4" x="20" y="8" width="220" height="34"
+  ></rect>
+  <text class="d-title d-title--faint" x="130" y="29">prompt text</text>
+
+  <path class="d-arrow" d="M130 46 v14 m-4 -6 l4 6 l4 -6"></path>
+
+  <!-- tokenizer -->
+  <rect class="d-box" rx="4" x="20" y="64" width="220" height="48"></rect>
+  <text class="d-title" x="130" y="84">BPE tokenizer</text>
+  <text class="d-sub" x="130" y="100">byte-level · 8,192 vocab</text>
+
+  <path class="d-arrow" d="M130 116 v14 m-4 -6 l4 6 l4 -6"></path>
+
+  <!-- decoder stack -->
+  <rect class="d-box d-box--ghost" rx="4" x="28" y="126" width="220" height="56"
+  ></rect>
+  <rect class="d-box d-box--ghost" rx="4" x="24" y="130" width="220" height="56"
+  ></rect>
+  <rect class="d-box" rx="4" x="20" y="134" width="220" height="56"></rect>
+  <text class="d-title" x="130" y="158">6 × decoder block</text>
+  <text class="d-sub" x="130" y="174">causal multi-head attention</text>
+
+  <path class="d-arrow" d="M130 194 v14 m-4 -6 l4 6 l4 -6"></path>
+
+  <!-- sampling -->
+  <rect class="d-box" rx="4" x="20" y="212" width="220" height="48"></rect>
+  <text class="d-title" x="130" y="232">autoregressive sampling</text>
+  <text class="d-sub" x="130" y="248">temperature · top-k · top-p</text>
+
+  <path class="d-arrow" d="M130 264 v14 m-4 -6 l4 6 l4 -6"></path>
+
+  <!-- serving -->
+  <rect class="d-box" rx="4" x="20" y="282" width="220" height="48"></rect>
+  <text class="d-title" x="130" y="302">FastAPI</text>
+  <text class="d-sub" x="130" y="318">server-sent events</text>
+
+  <path class="d-arrow d-arrow--accent" d="M130 334 v14 m-4 -6 l4 6 l4 -6"
+  ></path>
+
+  <text class="d-out" x="130" y="374">tokens stream live</text>
+</svg>
+
+<style>
+  .pipeline-diagram {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  .d-box {
+    fill: var(--bg-raised);
+    stroke: var(--rule);
+    stroke-width: 1;
+  }
+
+  .d-box--dashed {
+    fill: transparent;
+    stroke-dasharray: 4 4;
+  }
+
+  .d-box--ghost {
+    fill: var(--bg);
+  }
+
+  .d-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    fill: var(--ink);
+    text-anchor: middle;
+  }
+
+  .d-title--faint {
+    fill: var(--ink-faint);
+    font-weight: 400;
+  }
+
+  .d-sub {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    fill: var(--ink-faint);
+    text-anchor: middle;
+  }
+
+  .d-arrow {
+    fill: none;
+    stroke: var(--ink-faint);
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .d-arrow--accent {
+    stroke: var(--accent);
+  }
+
+  .d-out {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    fill: var(--accent);
+    text-anchor: middle;
+  }
+</style>

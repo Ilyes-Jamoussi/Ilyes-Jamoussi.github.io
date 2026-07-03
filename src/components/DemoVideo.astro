@@ -1,0 +1,36 @@
+---
+import type { ProjectVideo } from "../data/resume";
+
+interface Props {
+  video: ProjectVideo;
+}
+
+const { video } = Astro.props;
+---
+
+<video
+  class="demo-video"
+  src={video.src}
+  poster={video.poster}
+  width={video.width}
+  height={video.height}
+  autoplay
+  loop
+  muted
+  playsinline
+  preload="metadata"
+  aria-label={video.label}></video>
+
+<script>
+  // Users who prefer reduced motion get a paused video with controls instead
+  // of an autoplaying loop.
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const video of document.querySelectorAll<HTMLVideoElement>(
+      "video[autoplay]",
+    )) {
+      video.removeAttribute("autoplay");
+      video.pause();
+      video.controls = true;
+    }
+  }
+</script>

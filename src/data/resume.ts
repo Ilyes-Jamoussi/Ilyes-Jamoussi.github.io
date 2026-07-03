@@ -24,6 +24,29 @@ export interface ExperienceEntry {
   readonly bullets: readonly string[];
 }
 
+export interface ProjectVideo {
+  readonly src: string;
+  readonly poster: string;
+  readonly width: number;
+  readonly height: number;
+  readonly label: string;
+}
+
+export interface GenerationSample {
+  readonly settings: string;
+  readonly prompt: string;
+  readonly text: string;
+}
+
+export interface ConfusionMatrix {
+  readonly classes: readonly [string, string];
+  readonly rows: readonly [
+    readonly [number, number],
+    readonly [number, number],
+  ];
+  readonly caption: string;
+}
+
 export interface Project {
   readonly name: string;
   readonly tagline: string;
@@ -32,6 +55,10 @@ export interface Project {
   readonly stack: readonly string[];
   readonly repo: string;
   readonly demo?: string;
+  readonly video?: ProjectVideo;
+  readonly sample?: GenerationSample;
+  readonly confusionMatrix?: ConfusionMatrix;
+  readonly diagram?: "minigpt-pipeline";
 }
 
 export interface EducationEntry {
@@ -97,8 +124,7 @@ export const experience: readonly ExperienceEntry[] = [
     period: "May — Aug 2025",
     bullets: [
       "Developed an iOS & Android app that replaced paper workflows for 100+ technicians, cutting reporting delays from months to seconds.",
-      "Architected a serverless backend on AWS Cloud services, auto-scaling to 1M+ users with global availability.",
-      "Implemented offline-first functionality with AWS AppSync, allowing full offline use with automatic data synchronization.",
+      "Architected a serverless, offline-first backend on AWS — AppSync with automatic data synchronization — auto-scaling to 1M+ users with global availability.",
       "Integrated an AI assistant using Claude 3.5 Sonnet on Amazon Bedrock, streamlining field documentation across technicians.",
     ],
   },
@@ -117,8 +143,7 @@ export const experience: readonly ExperienceEntry[] = [
     period: "May 2025 — present",
     bullets: [
       "Authored the program's first official Tutor Guide, adopted for all tutors starting Fall 2026 and codifying academic-integrity standards.",
-      "Led tutor recruitment: interviewing candidates and defining the criteria used to evaluate teaching ability.",
-      "As peer tutor (Oct 2024 — Apr 2025): tutored data structures & algorithms, probability & statistics, linear algebra, discrete mathematics, and design patterns.",
+      "Led tutor recruitment; as peer tutor (Oct 2024 — Apr 2025), tutored data structures & algorithms, probability & statistics, linear algebra, discrete mathematics, and design patterns.",
     ],
   },
 ] as const;
@@ -157,6 +182,12 @@ export const projects: readonly Project[] = [
     stack: ["PyTorch", "FastAPI", "Docker", "Streamlit"],
     repo: "https://github.com/Ilyes-Jamoussi/minigpt-llm",
     demo: "https://minigpt-llm.streamlit.app",
+    diagram: "minigpt-pipeline",
+    sample: {
+      settings: "temperature 0.8 · top-k 50 · top-p 0.95",
+      prompt: "Once upon a time",
+      text: "Once upon a time, there was a little girl named Lily. She loved to play outside in the park. One day, she saw a big, juicy apple on a tree. She picked it up and ate it all up.",
+    },
   },
   {
     name: "MailGuard AI",
@@ -166,10 +197,18 @@ export const projects: readonly Project[] = [
       "Custom 30K-token vocabulary built from the training split only; class-weighted loss on stratified splits.",
       "97.0% accuracy and 0.95 spam F1 on the SpamAssassin corpus.",
     ],
-    metrics: ["97.0% accuracy", "0.95 spam F1"],
+    metrics: ["97.0% accuracy", "0.95 spam F1", "10.9M parameters"],
     stack: ["PyTorch", "Streamlit"],
     repo: "https://github.com/Ilyes-Jamoussi/mailguard-ai",
     demo: "https://mailguard-ai.streamlit.app",
+    confusionMatrix: {
+      classes: ["ham", "spam"],
+      rows: [
+        [600, 16],
+        [10, 238],
+      ],
+      caption: "Confusion matrix — 864 unseen test emails",
+    },
   },
   {
     name: "Manor Tactics",
@@ -193,20 +232,14 @@ export const projects: readonly Project[] = [
     metrics: [],
     stack: ["C++", "AVR"],
     repo: "https://github.com/Ilyes-Jamoussi/AVR-Microcontroller-Robot",
-  },
-] as const;
-
-export const moreProjects: readonly Project[] = [
-  {
-    name: "Tetris",
-    tagline: "Classic + modern Tetris in vanilla JavaScript.",
-    bullets: [
-      "ES6 modules, hold and ghost pieces, per-mode leaderboards — no framework, live on GitHub Pages.",
-    ],
-    metrics: [],
-    stack: ["JavaScript"],
-    repo: "https://github.com/Ilyes-Jamoussi/Tetris",
-    demo: "https://ilyes-jamoussi.github.io/Tetris/",
+    video: {
+      src: "/media/avr-robot.mp4",
+      poster: "/media/avr-robot-poster.jpg",
+      width: 576,
+      height: 720,
+      label:
+        "Demo loop: the robot follows the black line course and navigates an intersection",
+    },
   },
 ] as const;
 
@@ -216,14 +249,6 @@ export const education: readonly EducationEntry[] = [
     degree:
       "B.Eng., Software Engineering — Artificial Intelligence & Data Science concentration",
     period: "Jan 2023 — Dec 2027 (expected)",
-    detail:
-      "Relevant coursework: machine learning, reinforcement learning, advanced algorithms, statistical learning.",
-  },
-  {
-    school: "Pierre Mendès France High School, Tunis",
-    degree:
-      "French Baccalaureate, Mathematics & Computer Science — “Mention Très Bien” (highest honors)",
-    period: "Sep 2018 — Jun 2022",
   },
 ] as const;
 

@@ -12,7 +12,7 @@
   --rule: #e3e3dc;
 
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Source Serif 4", ui-serif, Georgia, serif;
   --font-mono:
     ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas,
     monospace;
@@ -120,6 +120,10 @@ a:hover {
   padding-inline: 1.25rem;
 }
 
+.container--wide {
+  max-width: 66rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -177,9 +181,9 @@ a:hover {
 
 .wordmark {
   font-family: var(--font-display);
-  font-weight: 650;
-  font-size: 1.0625rem;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
   text-decoration: none;
   margin-right: auto;
 }
@@ -250,9 +254,9 @@ a:hover {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-weight: 650;
-  font-size: clamp(2.125rem, 7.5vw, 3rem);
-  letter-spacing: -0.035em;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 8vw, 3.25rem);
+  letter-spacing: -0.02em;
 }
 
 .lede {
@@ -432,9 +436,9 @@ a:hover {
 
 .project-name {
   font-family: var(--font-display);
-  font-weight: 650;
-  font-size: 1.1875rem;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  font-size: 1.3125rem;
+  letter-spacing: -0.01em;
 }
 
 .project-links {
@@ -514,41 +518,110 @@ a:hover {
     margin-left: 0;
     width: 100%;
   }
+
+  .project-media {
+    grid-column: 1;
+    margin-top: 1.25rem;
+  }
 }
 
-.more-list {
-  list-style: none;
-  padding: 1.25rem 0 0;
-  margin-top: 2.75rem;
-  border-top: 1px dashed var(--rule);
+/* Media column: demo video, pipeline diagram, confusion matrix */
+
+.project-media {
+  grid-column: 2;
+  margin-top: 1.5rem;
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
+  justify-items: start;
+  align-content: start;
 }
 
-.more-list li {
+.demo-video {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 24rem;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--bg-raised);
+}
+
+.sample {
+  margin: 1rem 0 0;
+  padding: 0.125rem 0 0.125rem 1rem;
+  border-left: 2px solid var(--rule);
+}
+
+.sample-text {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-style: italic;
   color: var(--ink-secondary);
 }
 
-.more-name {
-  font-weight: 600;
-  color: var(--ink);
+.sample-caption {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
 }
 
-.more-links {
-  margin-left: 0.5rem;
-  display: inline-flex;
-  gap: 0.875rem;
+.cm {
+  margin: 0;
 }
 
-.more-links a {
+.cm-table {
+  border-collapse: collapse;
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  color: var(--accent);
-  text-decoration-color: transparent;
 }
 
-.more-links a:hover {
-  text-decoration-color: var(--accent);
+.cm-table th,
+.cm-table td {
+  padding: 0.375rem 0.875rem;
+  text-align: right;
+  font-weight: 400;
+  border: 1px solid var(--rule);
+}
+
+.cm-table thead th,
+.cm-table tbody th {
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+}
+
+.cm-table thead td {
+  border: none;
+}
+
+.cm-cell {
+  color: var(--ink-faint);
+}
+
+.cm-cell--hit {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.cm-caption {
+  margin-top: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+@media (min-width: 69rem) {
+  .project {
+    grid-template-columns: 10.5rem minmax(0, 1fr) minmax(0, 19rem);
+    column-gap: 3rem;
+  }
+
+  .project-media {
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: 0.35rem;
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -686,9 +759,9 @@ a:hover {
 
 .not-found h1 {
   font-family: var(--font-display);
-  font-weight: 650;
+  font-weight: 600;
   font-size: clamp(1.75rem, 6vw, 2.5rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
 }
 
 .not-found p {

@@ -3,8 +3,8 @@
 [![Deploy](https://github.com/Ilyes-Jamoussi/Ilyes-Jamoussi.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ilyes-Jamoussi/Ilyes-Jamoussi.github.io/actions/workflows/deploy.yml)
 
 Personal site of [Ilyes Jamoussi](https://ilyes-jamoussi.github.io) — statically
-generated, zero client-side JavaScript except a ~20-line theme toggle, deployed
-on GitHub Pages.
+generated, deployed on GitHub Pages. Client-side JavaScript is limited to a
+~20-line theme toggle and a reduced-motion guard for the demo videos.
 
 ## Stack
 
@@ -13,8 +13,8 @@ on GitHub Pages.
   preset, plus `noUncheckedSideEffectImports` and `erasableSyntaxOnly`.
 - **Hand-written CSS** — design tokens as custom properties, dark/light theme
   via `data-theme` + `prefers-color-scheme`, no framework.
-- **Self-hosted fonts** (Fontsource): Inter for text and display, system mono
-  stack for labels.
+- **Self-hosted fonts** (Fontsource): Source Serif 4 for display, Inter for
+  text, system mono stack for labels.
 - **Build-time asset generation** — the OG image, favicon, and touch icon are
   rendered by [`scripts/generate-assets.ts`](scripts/generate-assets.ts)
   (satori → resvg) on every build.
@@ -57,8 +57,10 @@ lint → typecheck → build → deploy to GitHub Pages via `actions/deploy-page
 - Semantic landmarks, single `h1`, labeled sections, skip link,
   `focus-visible` styles, WCAG AA contrast in both themes,
   `prefers-reduced-motion` respected.
-- Static HTML with inlined critical CSS, self-hosted subset fonts, no images
-  on the page, no third-party requests.
+- Static HTML with inlined CSS, self-hosted subset fonts, no third-party
+  requests. Demo media is compressed (H.264, sub-600 KB) and lazy where
+  possible; users with `prefers-reduced-motion` get paused videos with
+  controls.
 
 ## License
 

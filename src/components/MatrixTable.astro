@@ -1,0 +1,38 @@
+---
+import type { ConfusionMatrix } from "../data/resume";
+
+interface Props {
+  matrix: ConfusionMatrix;
+}
+
+const { matrix } = Astro.props;
+const [first, second] = matrix.classes;
+---
+
+<figure class="cm">
+  <table class="cm-table">
+    <caption class="sr-only">{matrix.caption}</caption>
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col">pred. {first}</th>
+        <th scope="col">pred. {second}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        matrix.rows.map((row, i) => (
+          <tr>
+            <th scope="row">actual {matrix.classes[i]}</th>
+            {row.map((value, j) => (
+              <td class:list={["cm-cell", { "cm-cell--hit": i === j }]}>
+                {value}
+              </td>
+            ))}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  <figcaption class="cm-caption">{matrix.caption}</figcaption>
+</figure>
