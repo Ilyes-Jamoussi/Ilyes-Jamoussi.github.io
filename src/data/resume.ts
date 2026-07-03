@@ -129,11 +129,11 @@ export const experience: readonly ExperienceEntry[] = [
   },
   {
     org: "Amazon Web Services",
-    role: "Cloud Consultant Intern, ProServe A2C",
+    role: "Cloud Consultant Intern, Professional Services (ProServe)",
     period: "May — Aug 2025",
     bullets: [
       "Developed an iOS & Android app that replaced paper workflows for 100+ technicians, cutting reporting delays from months to seconds.",
-      "Architected a serverless, offline-first backend on AWS — AppSync with automatic data synchronization — auto-scaling to 1M+ users with global availability.",
+      "Architected a serverless, offline-first backend on AWS — AppSync with automatic data synchronization — with automatic scaling and high availability, removing all server management for the client.",
       "Integrated an AI assistant using Claude 3.5 Sonnet on Amazon Bedrock, streamlining field documentation across technicians.",
     ],
     image: {
@@ -229,13 +229,13 @@ export const projects: readonly Project[] = [
   },
   {
     name: "Manor Tactics",
-    tagline: "Real-time online multiplayer strategy game.",
+    tagline: "Real-time multiplayer tactical RPG.",
     bullets: [
       "Real-time multiplayer tactical RPG with an Angular frontend and NestJS backend, using REST APIs and WebSockets (Socket.IO); includes a visual map editor and AI players.",
-      "GitLab CI/CD pipelines with automated builds, linting, 100% unit-test coverage, and deployment on AWS EC2.",
+      "CI/CD: lint and 1,300+ unit tests in GitLab CI, with automated deployment to AWS EC2 via GitHub Actions.",
       "Team project of 5 at Polytechnique — 2nd top contributor with 318 of 955 commits.",
     ],
-    metrics: ["100% unit-test coverage"],
+    metrics: ["1,300+ unit tests in CI"],
     stack: ["Angular", "NestJS", "Socket.IO", "TypeScript", "AWS EC2"],
     repo: "https://github.com/Ilyes-Jamoussi/Online-Multiplayer-RPG-Platform",
   },
