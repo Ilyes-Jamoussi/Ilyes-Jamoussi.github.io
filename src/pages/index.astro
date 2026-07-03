@@ -207,7 +207,13 @@ import Base from "../layouts/Base.astro";
           skills.map((group) => (
             <div>
               <dt>{group.label}</dt>
-              <dd>{group.items.join(" · ")}</dd>
+              <dd>
+                <ul class="dot-list">
+                  {group.items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </dd>
             </div>
           ))
         }
@@ -223,13 +229,11 @@ import Base from "../layouts/Base.astro";
         The fastest way to reach me is email.
       </p>
       <ul class="contact-links">
-        <li><a href={`mailto:${email}`}>{email}</a></li>
-        <li><ExtLink href={github}>github.com/Ilyes-Jamoussi</ExtLink></li>
         <li>
-          <ExtLink href={linkedin}>
-            linkedin.com/in/ilyes-jamoussi-b4aa94251
-          </ExtLink>
+          <a class="contact-email" href={`mailto:${email}`}>{email}</a>
         </li>
+        <li><ExtLink href={github}>GitHub</ExtLink></li>
+        <li><ExtLink href={linkedin}>LinkedIn</ExtLink></li>
       </ul>
     </div>
   </section>

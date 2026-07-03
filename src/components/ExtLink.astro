@@ -1,7 +1,8 @@
 ---
 /**
  * External link: opens in a new tab, marked visually with ↗ and
- * announced to screen readers.
+ * announced to screen readers. The slot is rendered trimmed so
+ * formatting-induced whitespace never sneaks in before the arrow.
  */
 interface Props {
   href: string;
@@ -9,12 +10,11 @@ interface Props {
 }
 
 const { href, class: className } = Astro.props;
+const label = (await Astro.slots.render("default")).trim();
 ---
 
-<a href={href} class={className} target="_blank" rel="noopener noreferrer">
-  <slot /><span class="external-mark" aria-hidden="true">↗</span><span
-    class="sr-only"
-  >
-    (opens in new tab)</span
-  >
-</a>
+<a href={href} class={className} target="_blank" rel="noopener noreferrer"
+  ><Fragment set:html={label} /><span class="external-mark" aria-hidden="true"
+    >↗</span
+  ><span class="sr-only"> (opens in new tab)</span></a
+>

@@ -163,6 +163,22 @@ a:hover {
   margin-left: 0.15em;
 }
 
+.dot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+}
+
+.dot-list li + li::before {
+  content: "·";
+  margin-right: 0.5rem;
+  color: var(--ink-faint);
+}
+
 /* ------------------------------------------------------------------ */
 /* Header                                                              */
 /* ------------------------------------------------------------------ */
@@ -741,6 +757,10 @@ a:hover {
 .contact-links a {
   font-family: var(--font-mono);
   font-size: 0.9375rem;
+}
+
+.contact-email {
+  font-weight: 500;
 }
 
 .site-footer {
