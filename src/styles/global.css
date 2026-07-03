@@ -12,7 +12,7 @@
   --rule: #e3e3dc;
 
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-display: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-mono:
     ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas,
     monospace;
@@ -177,8 +177,9 @@ a:hover {
 
 .wordmark {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.125rem;
+  font-weight: 650;
+  font-size: 1.0625rem;
+  letter-spacing: -0.02em;
   text-decoration: none;
   margin-right: auto;
 }
@@ -249,9 +250,9 @@ a:hover {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(2.25rem, 8vw, 3.25rem);
-  letter-spacing: -0.015em;
+  font-weight: 650;
+  font-size: clamp(2.125rem, 7.5vw, 3rem);
+  letter-spacing: -0.035em;
 }
 
 .lede {
@@ -431,8 +432,9 @@ a:hover {
 
 .project-name {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.3125rem;
+  font-weight: 650;
+  font-size: 1.1875rem;
+  letter-spacing: -0.02em;
 }
 
 .project-links {
@@ -684,8 +686,9 @@ a:hover {
 
 .not-found h1 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 650;
   font-size: clamp(1.75rem, 6vw, 2.5rem);
+  letter-spacing: -0.03em;
 }
 
 .not-found p {

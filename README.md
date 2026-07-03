@@ -13,8 +13,8 @@ on GitHub Pages.
   preset, plus `noUncheckedSideEffectImports` and `erasableSyntaxOnly`.
 - **Hand-written CSS** — design tokens as custom properties, dark/light theme
   via `data-theme` + `prefers-color-scheme`, no framework.
-- **Self-hosted fonts** (Fontsource): Fraunces for display, Inter for text,
-  system mono stack for labels.
+- **Self-hosted fonts** (Fontsource): Inter for text and display, system mono
+  stack for labels.
 - **Build-time asset generation** — the OG image, favicon, and touch icon are
   rendered by [`scripts/generate-assets.ts`](scripts/generate-assets.ts)
   (satori → resvg) on every build.
@@ -62,4 +62,4 @@ lint → typecheck → build → deploy to GitHub Pages via `actions/deploy-page
 
 ## License
 
-Code is MIT. Content (text, CV) is © Ilyes Jamoussi.
+Code is MIT. Content is © Ilyes Jamoussi.

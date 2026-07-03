@@ -39,10 +39,10 @@ async function font(pkgPath: string): Promise<Buffer> {
   return readFile(require.resolve(pkgPath));
 }
 
-const [fraunces600, inter400, inter500] = await Promise.all([
-  font("@fontsource/fraunces/files/fraunces-latin-600-normal.woff"),
+const [inter400, inter500, inter600] = await Promise.all([
   font("@fontsource/inter/files/inter-latin-400-normal.woff"),
   font("@fontsource/inter/files/inter-latin-500-normal.woff"),
+  font("@fontsource/inter/files/inter-latin-600-normal.woff"),
 ]);
 
 const ink = "#111114";
@@ -59,9 +59,9 @@ async function renderPng(
     width,
     height,
     fonts: [
-      { name: "Fraunces", data: fraunces600, weight: 600, style: "normal" },
       { name: "Inter", data: inter400, weight: 400, style: "normal" },
       { name: "Inter", data: inter500, weight: 500, style: "normal" },
+      { name: "Inter", data: inter600, weight: 600, style: "normal" },
     ],
   });
   const resvg = new Resvg(svg, { fitTo: { mode: "width", value: width } });
@@ -104,11 +104,10 @@ const ogNode = el(
       {
         style: {
           color: paper,
-          fontFamily: "Fraunces",
-          fontSize: 96,
+          fontSize: 92,
           fontWeight: 600,
           marginTop: 28,
-          letterSpacing: -1,
+          letterSpacing: -3,
         },
       },
       "Ilyes Jamoussi",
@@ -149,7 +148,7 @@ function monogram(radius: number, fontSize: number): ReactNode {
         backgroundColor: ink,
         borderRadius: radius,
         color: paper,
-        fontFamily: "Fraunces",
+        fontFamily: "Inter",
         fontSize,
         fontWeight: 600,
       },
@@ -167,9 +166,7 @@ await writeFile(path.join(publicDir, "apple-touch-icon.png"), touchIcon);
 const faviconSvg = await satori(monogram(13, 34), {
   width: 64,
   height: 64,
-  fonts: [
-    { name: "Fraunces", data: fraunces600, weight: 600, style: "normal" },
-  ],
+  fonts: [{ name: "Inter", data: inter600, weight: 600, style: "normal" }],
 });
 await writeFile(path.join(publicDir, "favicon.svg"), faviconSvg);
 
