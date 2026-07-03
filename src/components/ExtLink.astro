@@ -1,0 +1,20 @@
+---
+/**
+ * External link: opens in a new tab, marked visually with ↗ and
+ * announced to screen readers.
+ */
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { href, class: className } = Astro.props;
+---
+
+<a href={href} class={className} target="_blank" rel="noopener noreferrer">
+  <slot /><span class="external-mark" aria-hidden="true">↗</span><span
+    class="sr-only"
+  >
+    (opens in new tab)</span
+  >
+</a>

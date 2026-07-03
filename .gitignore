@@ -1,1 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Generated assets (built by scripts/generate-assets.ts)
+public/og.png
+public/apple-touch-icon.png
+public/favicon.svg
+
+# OS
 .DS_Store
+
+# Logs
+npm-debug.log*

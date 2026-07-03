@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Page not found — Ilyes Jamoussi";
+const description =
+  "This page doesn’t exist. Everything lives on the home page.";
+---
+
+<Base title={title} description={description}>
+  <div class="container">
+    <section class="not-found">
+      <p class="code">HTTP 404</p>
+      <h1>This page doesn’t exist.</h1>
+      <p>
+        The address may be mistyped, or the page may have moved. Everything on
+        this site lives on <a href="/">the home page</a>.
+      </p>
+    </section>
+  </div>
+</Base>

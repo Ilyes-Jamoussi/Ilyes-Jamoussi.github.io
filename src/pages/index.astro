@@ -1,0 +1,212 @@
+---
+import ExtLink from "../components/ExtLink.astro";
+import {
+  certifications,
+  education,
+  email,
+  experience,
+  extracurriculars,
+  github,
+  hero,
+  linkedin,
+  moreProjects,
+  projects,
+  skills,
+} from "../data/resume";
+import Base from "../layouts/Base.astro";
+---
+
+<Base>
+  <div class="container">
+    <section class="hero" aria-label="Introduction">
+      <p class="kicker">{hero.kicker}</p>
+      <h1>Ilyes Jamoussi</h1>
+      <p class="lede">{hero.lede}</p>
+      <ul class="now-list">
+        {hero.now.map((item) => <li>{item}</li>)}
+      </ul>
+      <div class="hero-links">
+        <ExtLink href={github}>GitHub</ExtLink>
+        <ExtLink href={linkedin}>LinkedIn</ExtLink>
+        <a href={`mailto:${email}`}>Email</a>
+        <a href="/cv.pdf" target="_blank" rel="noopener">
+          CV<span class="sr-only"> (PDF, opens in new tab)</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="work" class="section" aria-labelledby="work-title">
+      <h2 class="section-title" id="work-title">Experience</h2>
+      <div class="entries">
+        {
+          experience.map((entry) => (
+            <article class="entry">
+              <p class="entry-period">{entry.period}</p>
+              <div>
+                <h3 class="entry-org">{entry.org}</h3>
+                <p class="entry-role">{entry.role}</p>
+                <ul class="entry-bullets">
+                  {entry.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Selected projects</h2>
+      <ol class="projects">
+        {
+          projects.map((project) => (
+            <li class="project">
+              <div class="project-body">
+                <div class="project-head">
+                  <h3 class="project-name">{project.name}</h3>
+                  <div class="project-links">
+                    <ExtLink href={project.repo}>code</ExtLink>
+                    {project.demo && (
+                      <ExtLink href={project.demo}>live demo</ExtLink>
+                    )}
+                  </div>
+                </div>
+                <p class="project-tagline">{project.tagline}</p>
+                <ul class="project-bullets">
+                  {project.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+                <p class="project-meta">
+                  {project.metrics.length > 0 && (
+                    <span class="project-metrics">
+                      {project.metrics.join(" · ")}
+                    </span>
+                  )}
+                  <span class="project-stack">{project.stack.join(" · ")}</span>
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+      <ul class="more-list">
+        {
+          moreProjects.map((project) => (
+            <li>
+              <span class="more-name">{project.name}</span> —{" "}
+              {project.bullets[0]}
+              <span class="more-links">
+                <ExtLink href={project.repo}>code</ExtLink>
+                {project.demo && <ExtLink href={project.demo}>play</ExtLink>}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section id="education" class="section" aria-labelledby="education-title">
+      <h2 class="section-title" id="education-title">
+        Education & certifications
+      </h2>
+      <div class="entries">
+        {
+          education.map((entry) => (
+            <article class="entry">
+              <p class="entry-period">{entry.period}</p>
+              <div>
+                <h3 class="entry-org">{entry.school}</h3>
+                <p class="entry-role">{entry.degree}</p>
+                {entry.detail && (
+                  <ul class="entry-bullets">
+                    <li>{entry.detail}</li>
+                  </ul>
+                )}
+              </div>
+            </article>
+          ))
+        }
+      </div>
+      <ul class="cert-list">
+        {
+          certifications.map((cert) => (
+            <li>
+              <span class="cert-name">{cert.name}</span>
+              <span class="cert-date">{cert.date}</span>
+              <ExtLink class="cert-verify" href={cert.verifyUrl}>
+                verify
+              </ExtLink>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section
+      id="extracurriculars"
+      class="section"
+      aria-labelledby="extracurriculars-title"
+    >
+      <h2 class="section-title" id="extracurriculars-title">
+        Extracurriculars
+      </h2>
+      <div class="entries">
+        {
+          extracurriculars.map((entry) => (
+            <article class="entry">
+              <p class="entry-period">{entry.period}</p>
+              <div>
+                <h3 class="entry-org">{entry.org}</h3>
+                <p class="entry-role">{entry.role}</p>
+                <ul class="entry-bullets">
+                  {entry.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 class="section-title" id="skills-title">Skills</h2>
+      <dl class="skills-list">
+        {
+          skills.map((group) => (
+            <div>
+              <dt>{group.label}</dt>
+              <dd>{group.items.join(" · ")}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <p class="contact-lede">
+        I’m looking for software engineering and machine learning internships.
+        The fastest way to reach me is email.
+      </p>
+      <ul class="contact-links">
+        <li><a href={`mailto:${email}`}>{email}</a></li>
+        <li><ExtLink href={github}>github.com/Ilyes-Jamoussi</ExtLink></li>
+        <li>
+          <ExtLink href={linkedin}>
+            linkedin.com/in/ilyes-jamoussi-b4aa94251
+          </ExtLink>
+        </li>
+        <li>
+          <a href="/cv.pdf" download="Ilyes-Jamoussi-CV.pdf">
+            Download CV (PDF)
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</Base>

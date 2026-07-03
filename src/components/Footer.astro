@@ -1,0 +1,16 @@
+---
+import { site, sourceRepo } from "../data/resume";
+import ExtLink from "./ExtLink.astro";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© {year} {site.name}</p>
+    <p>
+      Built by hand with Astro — <ExtLink href={sourceRepo}>view source</ExtLink
+      >
+    </p>
+  </div>
+</footer>
