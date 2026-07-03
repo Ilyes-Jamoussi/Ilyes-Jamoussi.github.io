@@ -114,6 +114,19 @@ import Base from "../layouts/Base.astro";
                     <li>{bullet}</li>
                   ))}
                 </ul>
+                {entry.image && (
+                  <figure class="entry-figure">
+                    <img
+                      src={entry.image.src}
+                      width={entry.image.width}
+                      height={entry.image.height}
+                      alt={entry.image.alt}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>{entry.image.caption}</figcaption>
+                  </figure>
+                )}
               </div>
             </article>
           ))

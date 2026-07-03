@@ -17,11 +17,20 @@ export interface ContactLink {
   readonly external: boolean;
 }
 
+export interface EntryImage {
+  readonly src: string;
+  readonly width: number;
+  readonly height: number;
+  readonly alt: string;
+  readonly caption: string;
+}
+
 export interface ExperienceEntry {
   readonly org: string;
   readonly role: string;
   readonly period: string;
   readonly bullets: readonly string[];
+  readonly image?: EntryImage;
 }
 
 export interface ProjectVideo {
@@ -127,6 +136,14 @@ export const experience: readonly ExperienceEntry[] = [
       "Architected a serverless, offline-first backend on AWS — AppSync with automatic data synchronization — auto-scaling to 1M+ users with global availability.",
       "Integrated an AI assistant using Claude 3.5 Sonnet on Amazon Bedrock, streamlining field documentation across technicians.",
     ],
+    image: {
+      src: "/media/aws-architecture.png",
+      width: 750,
+      height: 780,
+      alt: "AWS architecture diagram: a cross-platform mobile app using Amplify DataStore with local SQLite storage syncs over a GraphQL API to AWS AppSync, with Cognito for authentication, S3 and DynamoDB for storage, and Lambda functions calling Amazon Bedrock and Amazon Location Service.",
+      caption:
+        "Serverless backend — offline-first sync (AppSync) · Lambda · Bedrock · Location Service",
+    },
   },
   {
     org: "Polytechnique Montréal",
