@@ -249,10 +249,10 @@ export const projects: readonly Project[] = [
   },
   {
     name: "AVR Robot",
-    tagline: "Autonomous pathfinding in embedded C++.",
+    tagline: "Autonomous navigation in bare-metal C++.",
     bullets: [
-      "Autonomous line-following robot in C++ on an AVR ATmega324PA microcontroller, using Dijkstra's algorithm for shortest-path navigation and stopping 10 cm from target posts.",
-      "Integrates infrared sensors, PWM motor control, I2C EEPROM persistence, and UART communication.",
+      "Autonomous line-following robot in bare-metal C++ on an AVR ATmega324PA — self-localizes by matching its recorded move sequence against known route signatures and stops 10 cm from target posts.",
+      "Register-level PWM motor control, infrared sensing, I2C EEPROM persistence, and UART reporting — no Arduino, no HAL.",
     ],
     metrics: [],
     stack: ["C++", "AVR"],
