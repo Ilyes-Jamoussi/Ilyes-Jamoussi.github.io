@@ -232,10 +232,10 @@ export const projects: readonly Project[] = [
     tagline: "Cross-platform multiplayer tactics game.",
     bullets: [
       "Cross-platform multiplayer tactics game — Angular web, Flutter mobile, and Electron desktop clients driven by one authoritative NestJS + Socket.IO server (MongoDB, Firebase Auth); 4 game modes, visual map editor, AI players.",
-      "950+ unit tests (Jest & Jasmine) developed against GitLab CI; the public repo ships a GitHub Actions lint-and-build pipeline.",
+      "980+ unit tests (Jest & Jasmine), all passing in a GitHub Actions pipeline that tests, lints, and builds on every push.",
       "Team project of 6 at Polytechnique — top contributor with 283 of 545 commits; led the Angular client and core server gateways.",
     ],
-    metrics: ["950+ unit tests", "3 platforms, 1 server"],
+    metrics: ["980+ unit tests", "3 platforms, 1 server"],
     stack: [
       "Angular",
       "NestJS",
