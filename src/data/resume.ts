@@ -1,7 +1,7 @@
 /**
  * Single source of truth for all site content.
- * Every fact here is taken verbatim from CV_English.pdf or from the
- * READMEs/descriptions of the referenced repositories — nothing invented.
+ * Every fact here is taken verbatim from the resume (Ilyes_Jamoussi_Resume.pdf)
+ * or from the READMEs/descriptions of the referenced repositories — nothing invented.
  */
 
 export interface SiteMeta {
