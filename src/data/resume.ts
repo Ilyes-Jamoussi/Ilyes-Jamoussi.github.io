@@ -236,7 +236,15 @@ export const projects: readonly Project[] = [
       "Team project of 6 at Polytechnique — top contributor with 283 of 545 commits; led the Angular client and core server gateways.",
     ],
     metrics: ["950+ unit tests", "3 platforms, 1 server"],
-    stack: ["Angular", "NestJS", "Socket.IO", "Flutter", "Electron", "TypeScript", "MongoDB"],
+    stack: [
+      "Angular",
+      "NestJS",
+      "Socket.IO",
+      "Flutter",
+      "Electron",
+      "TypeScript",
+      "MongoDB",
+    ],
     repo: "https://github.com/Ilyes-Jamoussi/cross-platform-multiplayer-game",
   },
   {
