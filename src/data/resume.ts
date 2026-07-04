@@ -100,7 +100,7 @@ export const site: SiteMeta = {
 
 export const email = "jamoussi.mail@gmail.com";
 export const github = "https://github.com/Ilyes-Jamoussi";
-export const linkedin = "https://www.linkedin.com/in/ilyes-jamoussi-b4aa94251/";
+export const linkedin = "https://www.linkedin.com/in/ilyes-jamoussi";
 export const sourceRepo =
   "https://github.com/Ilyes-Jamoussi/Ilyes-Jamoussi.github.io";
 
