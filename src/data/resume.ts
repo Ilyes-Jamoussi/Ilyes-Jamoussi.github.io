@@ -68,6 +68,7 @@ export interface Project {
   readonly sample?: GenerationSample;
   readonly confusionMatrix?: ConfusionMatrix;
   readonly diagram?: "minigpt-pipeline";
+  readonly image?: EntryImage;
 }
 
 export interface EducationEntry {
@@ -188,6 +189,26 @@ export const extracurriculars: readonly ExperienceEntry[] = [
 
 export const projects: readonly Project[] = [
   {
+    name: "Peaked Circuits",
+    tagline: "A quantum-advantage paper, reproduced number for number.",
+    bullets: [
+      "Reproduction of Aaronson & Zhang (arXiv:2404.14493), Section 3: 1D brick-wall circuits — 40 Haar-random layers followed by 10 variational SU(4) layers trained to concentrate the output distribution on a single basis state.",
+      "Peak weight maximized with batched Adam restarts, step-decay learning rate and early stopping; every run is fully seeded and the saved artifact rebuilds the exact circuit.",
+      "Reaches peak weight 0.2024 at 12 qubits against the paper's reported ~0.2, boosting the peaked string three orders of magnitude above the 2⁻¹² baseline.",
+    ],
+    metrics: ["δ = 0.2024 (paper: ~0.2)", "12 qubits · 50 layers", "CI-tested"],
+    stack: ["PennyLane", "NumPy", "SciPy"],
+    repo: "https://github.com/Ilyes-Jamoussi/peaked-circuits-pennylane",
+    image: {
+      src: "/media/peaked-circuits-distribution.png",
+      width: 900,
+      height: 600,
+      alt: "Sorted output distributions of the random circuit alone and with optimized peaking layers",
+      caption:
+        "Output distribution before vs. after peaking — the peaked basis state is boosted three orders of magnitude",
+    },
+  },
+  {
     name: "MiniGPT",
     tagline: "A GPT built from scratch, down to the tokenizer.",
     bullets: [
@@ -304,6 +325,7 @@ export const skills: readonly SkillGroup[] = [
     items: [
       "Python",
       "PyTorch",
+      "PennyLane",
       "Transformers",
       "scikit-learn",
       "Pandas",

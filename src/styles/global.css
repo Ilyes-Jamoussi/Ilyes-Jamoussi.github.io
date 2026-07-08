@@ -573,6 +573,10 @@ a:hover {
   align-content: start;
 }
 
+.project-media .entry-figure {
+  margin: 0;
+}
+
 .demo-video {
   display: block;
   width: auto;
