@@ -267,6 +267,7 @@ export const projects: readonly Project[] = [
       "MongoDB",
     ],
     repo: "https://github.com/Ilyes-Jamoussi/cross-platform-multiplayer-game",
+    demo: "https://ilyes-jamoussi.github.io/cross-platform-multiplayer-game/",
   },
   {
     name: "AVR Robot",
